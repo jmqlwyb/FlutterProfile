@@ -1,7 +1,6 @@
 name: profile_application
 description: "A new Flutter project."
-publish_to: "none" # Remove this line if you wish to publish to pub.dev
-
+publish_to: "none"
 version: 1.0.0+1
 
 environment:
@@ -31,9 +30,9 @@ flutter:
         - asset: assets/fonts/Rubik-Medium.ttf
         - asset: assets/fonts/Rubik-MediumItalic.ttf
         - asset: assets/fonts/Rubik-Regular.ttf
-        - asset: assets/fonts/Rubik-Semibold.ttf
-        - asset: assets/fonts/Rubik-SemiboldItalic.ttf
+        - asset: assets/fonts/Rubik-Bold.ttf
+        - asset: assets/fonts/Rubik-BoldItalic.ttf
 
 assets:
-  - assets/images/file.png
-  - assets/images/LRM_20240517_192913-01.jpeg
+
+  - assets/images/1.jpeg

@@ -10,12 +10,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'RMAGALLANEZ',
+      title: 'j.mqlwyb',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF3A6D8C)),
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 203, 208, 211)),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Profile'),
+      home: const MyHomePage(title: 'Instagram'),
     );
   }
 }
@@ -26,68 +26,73 @@ class MyHomePage extends StatelessWidget {
   final String title;
 
   final String predefinedText =
-      """Hi, it’s me. I just wanted to call you and say that I’m sorry. 
-      I’m sorry for how things ended. I know it was hard for both of us, and I know that we didn’t 
-      understand each other very well. I just want you to know that I care about you, and I miss you.
-      I’ve been thinking about you a lot, and I just want you to be happy. I hope you’re doing well and that you’re 
-      finding joy in your life. I love you, and I really hope that you can forgive me for everything. I really want you to be happy."""; // Your predefined text
+      """Lorem Ipsum is simply dummy text of the printing and 
+      typesetting industry. Lorem Ipsum has been the industry's standard dummy 
+      text ever since the 1500s, when an unknown printer took a galley of type and 
+      scrambled it to make a type specimen book. It has survived not only five centuries, 
+      but also the leap into electronic typesetting, remaining essentially unchanged.
+       It was popularised in the 1960s with the release of
+        Letraset sheets containing Lorem Ipsum passages,
+         and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.."""; 
 
   void _followUser() {
-    print(
-        'Someone followed you RMAGALLANEZ!'); // Print message when user is followed
+    print('ig: @j.mqlwyb!'); 
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor:
-          const Color.fromARGB(181, 249, 218, 186), // Background color
-      appBar: AppBar(
-        backgroundColor:
-            Theme.of(context).colorScheme.inversePrimary, // App bar color
-        title: Text(
-          title,
-          style: const TextStyle(
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            colors: [
+              Color(0xFFfd1d1d),
+              Color(0xFF833ab4),
+              Color(0xFFfd1d1d),
+            ],
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
           ),
         ),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            // Profile Picture added here
-            const CircleAvatar(
-              radius: 50,
-              backgroundImage: NetworkImage(
-                  'assets/images/LRM_20240517_192913-01.jpeg'), // Replace with your image URL
-            ),
-            const SizedBox(height: 20), // Space between the image and text
-            const Text(
-              'Raymart Magallanes',
-              style: TextStyle(
-                fontSize: 24, // Font size for the name
-                fontWeight: FontWeight.bold, // Bold font weight
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              const CircleAvatar(
+                radius: 70,
+                backgroundImage: NetworkImage(
+                    'assets/images/1.jpeg'), 
               ),
-            ),
-            const SizedBox(
-                height: 20), // Space between name and predefined text
-            Text(
-              predefinedText, // Display the predefined text
-              style: const TextStyle(
-                fontSize: 16, // Set font size for the text
-                color: Colors.black, // Text color
+              const SizedBox(height: 20), 
+              const Text(
+                'Mary Loi Yves Kipte Ricalde ',
+                style: TextStyle(
+                  fontSize: 24, 
+                  fontWeight: FontWeight.bold,
+                  color: Color.fromARGB(255, 9, 9, 9), 
+                ),
               ),
-              textAlign: TextAlign.center, // Center the text
-            ),
-            const SizedBox(
-                height: 20), // Space between predefined text and button
-            ElevatedButton(
-              onPressed: _followUser, // Call follow user function
-              child: const Text('Follow'), // Button text
-            ),
-          ],
+              const SizedBox(height: 20), 
+              Text(
+                predefinedText, 
+                style: const TextStyle(
+                  fontSize: 16, 
+                  color: Color.fromARGB(255, 189, 182, 182),
+                ),
+                textAlign: TextAlign.center, 
+              ),
+              const SizedBox(height: 20), 
+              // Wrap the button in a Container with width
+              Container(
+                width: double.infinity, // Make the button expand to full width
+                padding: const EdgeInsets.symmetric(horizontal: 20), // Add padding
+                child: ElevatedButton(
+                  onPressed: _followUser, 
+                  child: const Text('I message rako diri sa akong IG'), 
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
